@@ -47,15 +47,15 @@ public class ProductAddTestAssignment4 {
 	@Test
 	public void productAddTest() throws InterruptedException {
 		Reporter.log("search for product in homepage");
-		hompaglib = new HomePageLibAssign(driver);
+		hompaglib = new Assignment4HomePageLib(driver);
 		hompaglib.searchForProduct(searchParam);
 		Reporter.log("verify that all search results contained search result parameter");
-		seareslib = new SearchResultsLibAssignment4(driver);
+		seareslib = new Assignment4SearchResultsLib(driver);
 		seareslib.clickFirstSearchResultLink(1);
 		Thread.sleep(2000);
 		webDrvUtil.switchWindow();
 		
-		propaglib=new ProductPageLibAssign(driver);
+		propaglib=new Assignment4ProductPageLib(driver);
 		propaglib.addVerify();
 		Thread.sleep(2000);
 		
