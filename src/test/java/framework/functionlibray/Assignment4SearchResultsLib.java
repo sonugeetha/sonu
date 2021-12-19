@@ -17,7 +17,7 @@ public class Assignment4SearchResultsLib {
 	
 	public List<String> getListOfProdNames() {
 		searespo=new SearchResultsPO(driver);
-		List<WebElement> oList=searespo.returnSearchResultsList();
+		List<WebElement> oList=searespo.returnSearchResultList();
 		List<String> searchResultProdNames=new LinkedList<String>();
 		for(WebElement oelem : oList) {
 			String prodName=oelem.getText().trim();
@@ -29,7 +29,7 @@ public class Assignment4SearchResultsLib {
 	
 	public void clickFirstSearchResultLink(int resultNum) {
 		searespo=new SearchResultsPO(driver);
-		List<WebElement> oList=searespo.returnSearchResultsList();
+		List<WebElement> oList=searespo.returnSearchResultList();
 		oList.get(resultNum-1).click();
 	}
 	
