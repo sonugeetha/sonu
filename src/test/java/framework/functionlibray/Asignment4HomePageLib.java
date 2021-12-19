@@ -6,14 +6,14 @@ import framework.pageobjects.Assignment4ProductPagePO;
 public class Asignment4HomePageLib{
 	
 	WebDriver driver;
-	Assignment4HomePagePo hompagepo;
+	Assignment4HomePagePO hompagepo;
 	
 	public void Assignment4HomePageLib(WebDriver driver) {
 		this.driver=driver;
 	}
 	
 	public void searchForProduct(String searchParam) {
-		hompagepo=new Assignment4HomePagePo(driver);
+		hompagepo=new Assignment4HomePagePO(driver);
 		hompagepo.enterValueInSearchBar(searchParam);
 		hompagepo.clickSearchBtn();
 	}
